@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sofia 💗</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffd1dc, #ffb6c1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #7a003c;
+}
+
+/* Floating flowers */
+.flower {
+    position: absolute;
+    font-size: 22px;
+    animation: float 10s linear infinite;
+    opacity: 0.8;
+}
+@keyframes float {
+    from { transform: translateY(100vh); }
+    to { transform: translateY(-10vh); }
+}
+
+.card {
+    background: #fff0f5;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    max-width: 360px;
+    text-align: center;
+    animation: pop 1s ease;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+button {
+    background: #ff69b4;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    margin: 6px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff1493;
+    transform: scale(1.08);
+}
+</style>
+</head>
+
+<body>
+
+<!-- flowers -->
+<script>
+for (let i = 0; i < 15; i++) {
+    let f = document.createElement("div");
+    f.className = "flower";
+    f.innerHTML = "🌼";
+    f.style.left = Math.random() * 100 + "vw";
+    f.style.animationDuration = (6 + Math.random() * 6) + "s";
+    document.body.appendChild(f);
+}
+</script>
+
+<div class="card" id="content">
+    <h1>Hi Sofia 💗</h1>
+    <p>I made something small…<br>just for you 🌸</p>
+    <button onclick="q1()">Open 🌼</button>
+</div>
+
+<script>
+function q1() {
+    content.innerHTML = `
+    <h1>Quick Question 😉</h1>
+    <p>Do you like surprises?</p>
+    <button onclick="q2()">Yes 💕</button>
+    <button onclick="q2()">Of course 😄</button>
+    `;
+}
+
+function q2() {
+    content.innerHTML = `
+    <h1>Hmm 🌸</h1>
+    <p>If someone makes you smile without trying…<br>is that special?</p>
+    <button onclick="q3()">Yes 🌼</button>
+    `;
+}
+
+function q3() {
+    content.innerHTML = `
+    <h1>Then This 💗</h1>
+    <p>
+    Sofia,<br>
+    you are that calm feeling,<br>
+    that soft smile,<br>
+    that quiet happiness.
+    </p>
+    <button onclick="q4()">One more 😉</button>
+    `;
+}
+
+function q4() {
+    content.innerHTML = `
+    <h1>Last Question 😌</h1>
+    <p>Should I keep making you smile?</p>
+    <button onclick="final()">Yes 💖</button>
+    <button onclick="final()">Definitely 🌷</button>
+    `;
+}
+
+function final() {
+    content.innerHTML = `
+    <h1>Then It’s Settled 💕</h1>
+    <p>
+    No matter the mood,<br>
+    no matter the day,<br>
+    I’ll always try<br>
+    to be your smile 🌸
+    </p>
+    <p style="font-size:14px;">— Just for you, Sofia 🌼</p>
+    `;
+}
+</script>
+
+</body>
+</html>
